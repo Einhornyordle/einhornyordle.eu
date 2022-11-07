@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>MyFTB Command Creator</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <h1>MyFTB Command Creator</h1>
+    <table id="mcc">
+        <tr>
+            <th>
+                Botcommand
+            </th>
+            <td>
+                <input list="botcommands" name="Botcommand">
+                <datalist id="botcommands" name="Botcommands">
+                    <option value="!executecommand">executecommand</option>
+                    <option value="!allowedconsolecommands">allowedconsolecommands</option>
+                    <option value="!printserver">printserver</option>
+                </datalist>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Server
+            </th>
+            <td>
+                <input list="servers" name="Server">
+                <datalist id="servers" name="Servers">
+                    <option value="">--------------------</option>
+                    <option value="">Adventure</option>
+                    <option value="">--------------------</option>
+                    <option value="antimatter-1.antimatter-1">Antimatter 1</option>
+                    <option value="direwolf.direwolf1">Direwolf 1</option>
+                    <option value="direwolf.dw20112-1">Dw20112 1</option>
+                    <option value="harvestblock.harvestblock-1">Harvestblock 1</option>
+                    <option value="regrowth.regrowth">Regrowth</option>
+                    <option value="skyfactory.skyfactory1">Skyfactory 1</option>
+                    <option value="Skyfactory4.SF4-1">SF4 1</option>
+                    <option value="Skyfactory4.SF4-2">SF4 2</option>
+                    <option value="Skyfactory4.SF4-1-sub">SF4 1 Sub</option>
+                    <option value="stagedlearning-1.stagedlearning-1">Stagedlearning 1</option>
+                    <option value="stoneblock.Stoneblock2-1">Stone2 1</option>
+                    <option value="stoneblock.Stoneblock2-2">Stone2 2</option>
+                    <option value="">--------------------</option>
+                    <option value="">Horizons</option>
+                    <option value="">--------------------</option>
+                    <option value="horizons.horizons-1">Horizons 1</option>
+                    <option value="horizons.horizons-2">Horizons 2</option>
+                    <option value="horizons.horizons-1-sub">Horizons 1 Sub</option>
+                    <option value="horizons.horizons-1-private">Horizons 1 Private</option>
+                </datalist>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Command
+            </th>
+            <td>
+                <input list="commands" name="Command">
+                <datalist id="commands">
+                    <option value="spawn">spawn</option>
+                    <option value="uptime">uptime</option>
+                    <option value="list">list</option>
+                    <option value="tps">tps</option>
+                    <option value="worldinfo">worldinfo</option>
+                    <option value="playerinfo">playerinfo</option>
+                    <option value="gamestage">gamestage</option>
+                    <option value="listbackups">listbackups</option>
+                    <option value="backup">backup</option>
+                    <option value="worldplayers">worldplayers</option>
+                    <option value="updateventdatapack">updateventdatapack</option>
+                    <option value="ftbquests">ftbquests</option>
+                    <option value="thaumcraft">thaumcraft</option>
+                    <option value="projecte">projecte</option>
+                    <option value="advancement">advancement</option>
+                    <option value="as">as</option>
+                    <option value="whitelist">whitelist</option>
+                    <option value="list">list</option>
+                    <option value="crashreports">crashreports</option>
+                    <option value="bq_admin">bq_admin</option>
+                    <option value="monk">monk</option>
+                    <option value="rftdim">rftdim</option>
+                    <option value="unload">unload</option>
+                    <option value="maxworlds">maxworlds</option>
+                    <option value="createvoidworld">createvoidworld</option>
+                    <option value="newworld">newworld</option>
+                    <option value="datapack">datapack</option>
+                    <option value="wmworld">wmworld</option>
+                    <option value="deldata">deldata</option>
+                </datalist>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Parameter
+            </th>
+            <td>
+                <input type="text" name="Parameter">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="button" onclick="CommandToClipboard()">Copy</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="text" id="output" name="Output" value="Command Text Output" readonly hidden>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="button" onclick="Reset()">Reset</button>
+            </td>
+        </tr>
+    </table>
+    <table id="mccOld" hidden>
+        <tr>
+            <th>
+                Serverteam
+            </th>
+            <td colspan="2">
+                <select id="serverteam" name="Serverteam" onchange="ChangeServers(this.value)">
+                    <option value="adventure">Adventure</option>
+                    <option value="horizons">Horizons</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Botcommand
+            </th>
+            <td>
+                <select id="botcommand" name="Botcommand">
+                    <option value="!executecommand">executecommand</option>
+                    <option value="!allowedconsolecommands">allowedconsolecommands</option>
+                    <option value="!printserver">printserver</option>
+                </select>
+            </td>
+            <td>
+                <input type="text" id="customBotcommand" name="Botcommand">
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Server
+            </th>
+            <td>
+                <select id="adventureServer" name="Server">
+                    <option value="antimatter-1.antimatter-1">Antimatter 1</option>
+                    <option value="direwolf.direwolf1">Direwolf 1</option>
+                    <option value="direwolf.dw20112-1">Dw20112 1</option>
+                    <option value="harvestblock.harvestblock-1">Harvestblock 1</option>
+                    <option value="regrowth.regrowth">Regrowth</option>
+                    <option value="Skyfactory4.SF4-1">SF4 1</option>
+                    <option value="Skyfactory4.SF4-2">SF4 2</option>
+                    <option value="Skyfactory4.SF4-1-sub">SF4 1 Sub</option>
+                    <option value="skyfactory.skyfactory1">Skyfactory 1</option>
+                    <option value="stagedlearning-1.stagedlearning-1">Stagedlearning 1</option>
+                    <option value="stoneblock.Stoneblock2-1">Stone2 1</option>
+                    <option value="stoneblock.Stoneblock2-2">Stone2 2</option>
+                </select>
+                <select id="horizonsServer" name="Server" hidden>
+                    <option value="horizons.horizons-1">Horizons 1</option>
+                    <option value="horizons.horizons-2">Horizons 2</option>
+                    <option value="horizons.horizons-1-sub">Horizons 1 Sub</option>
+                    <option value="horizons.horizons-1-private">Horizons 1 Private</option>
+                </select>
+            </td>
+            <td>
+                <input type="text" id="customServer" name="Server">
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Command
+            </th>
+            <td>
+                <select id="command" name="Command">
+                    <option value="spawn">spawn</option>
+                    <option value="uptime">uptime</option>
+                    <option value="list">list</option>
+                    <option value="tps">tps</option>
+                    <option value="worldinfo">worldinfo</option>
+                    <option value="playerinfo">playerinfo</option>
+                    <option value="gamestage">gamestage</option>
+                    <option value="listbackups">listbackups</option>
+                    <option value="backup">backup</option>
+                    <option value="worldplayers">worldplayers</option>
+                    <option value="updateventdatapack">updateventdatapack</option>
+                    <option value="ftbquests">ftbquests</option>
+                    <option value="thaumcraft">thaumcraft</option>
+                    <option value="projecte">projecte</option>
+                    <option value="advancement">advancement</option>
+                    <option value="as">as</option>
+                    <option value="whitelist">whitelist</option>
+                    <option value="list">list</option>
+                    <option value="crashreports">crashreports</option>
+                    <option value="bq_admin">bq_admin</option>
+                    <option value="monk">monk</option>
+                    <option value="rftdim">rftdim</option>
+                    <option value="unload">unload</option>
+                    <option value="maxworlds">maxworlds</option>
+                    <option value="createvoidworld">createvoidworld</option>
+                    <option value="newworld">newworld</option>
+                    <option value="datapack">datapack</option>
+                    <option value="wmworld">wmworld</option>
+                </select>
+            </td>
+            <td>
+                <input type="text" id="customCommand" name="Command">
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Parameter
+            </th>
+            <td>
+                <input type="text" id="parameter" name="Parameter">
+            </td>
+            <td>
+                <input type="text" id="customParameter" name="Parameter">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <button type="button" onclick="CommandToClipboardOld()">Copy</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <input type="text" id="outputOld" name="Output" value="Command Text Output" readonly hidden>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <h1>MyFTB Better Questing Command Creator</h1>
+    <table>
+        <tr>
+            <th>
+                /bq_admin check_all
+            </th>
+            <td>
+                <textarea id="checkAll" name="CheckAll"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Username
+            </th>
+            <td>
+                <input type="text" id="username" name="Username">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="button" onclick="CreateQuestCommands()">Start</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="text" id="outputCommand" name="OutputCommand" value="Command Text Output" readonly hidden>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" id="back" name="Back" onclick="NextCommand(-1)" hidden>Back</button>
+            </td>
+            <td>
+                <button type="button" id="next" name="Next" onclick="NextCommand(1)" hidden>Next</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <textarea type="text" id="outputCommandList" name="OutputCommandList" value="Command Text Output"
+                    readonly hidden></textarea>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

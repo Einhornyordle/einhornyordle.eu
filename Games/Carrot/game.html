@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"><meta name="author" content="Einhornyordle">
+    <meta name="description" content="A minigame about farming and selling carrots">
+    <meta name="keywords" content="Einhornyordle, Crystal, TheCrystal, Bot, Discord, Server, Carrot, Game, CarrotGame, MyFTB">
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        body {
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+        }
+
+        img.icon {
+            height: 16px;
+            width: 16px;
+        }
+    </style>
+</head>
+
+<body ondragstart="return false;" ondrop="return false;">
+    <table>
+        <tr>
+            <td><img class="field" id="field1"></td>
+            <td><img class="field" id="field2"></td>
+            <td><img class="field" id="field3"></td>
+            <td id="stats">C<br>C</td>
+        </tr>
+        <tr>
+            <td><img class="field" id="field4"></td>
+            <td><img class="field" id="field5"></td>
+            <td><img class="field" id="field6"></td>
+            <td><img id="payout" src="Pics/Payout.png" onclick="Sell()"></td>
+        </tr>
+        <tr>
+            <td><img class="field" id="field7"></td>
+            <td><img class="field" id="field8"></td>
+            <td><img class="field" id="field9"></td>
+            <td><img id="reward" src="Pics/Reward.png" onclick="Reward()"></td>
+        </tr>
+        <tr>
+            <td><img id="upgrade1" src="Pics/CoinUp.png"></td>
+            <td><img id="upgrade2" src="Pics/RewardUp.png"></td>
+            <td><img id="upgrade3" src="Pics/WateringCan.png"></td>
+        </tr>
+        <tr>
+            <td id="priceUpText" align="center"></td>
+            <td id="rewardUpText" align="center"></td>
+            <td id="specialUpText" align="center"></td>
+        </tr>
+    </table>
+    <div>
+        <p>
+            Android App now available! <a href="../downloads/eu.einhornyordle.carrotgame.apk">Download</a>
+        </p>
+        <h2>Instructions</h2>
+        <p>
+            To win the game you have to fulfill the following requirements:<br>
+            * You have to buy all upgrades from the third upgrade slot so that the "Win"-Field appears.<br>
+            * To activate it, all 9 fields need to have a grown carrot plantet on them at the same time.<br>
+            * After that, you just have to click on the "Win"-Field.<br>
+            <br>
+            There are 9 fields where you can grow carrots, to do so you have to unlock (buy) them first. This costs a
+            specific amount of coins depending on the field (left to right, top to bottom: 1, 10, 100, 1.000, 10.000,
+            100.000, 1.000.000, 10.000.000 and 100.000.000 coins).<br>
+            <br>
+            After unlocking a field you can plant a seed for 3 coins which slowly grows into a carrot. As soon as the
+            carrot is fully grown you can harvest it by clicking on the field. By clicking on the Sell-Button (the one
+            below the Carrot and Coin counter) you can sell all your carrots at once for 5 coins each.<br>
+            <br>
+            The lootbox below the Sell-Button can be clicked every few seconds and gives you a random amount of coins or
+            carrots between 0 and 9<br>
+            <br>
+            Below the 9 carrot fields there are 3 upgrade slots:<br>
+            * The first upgrade increases the sell value of carrots.<br>
+            * The second upgrade increases the amount of loot you gain from the lootbox.<br>
+            * The third upgrade consists of unique upgrades which can only be bought in a limited amount. After you
+            bought the final upgrade from this slot the "Win"-Field will appear here.<br>
+            <br>
+            The following unique upgrades are available <b>(Spoilers ahead!)</b>:<br>
+            * Watering Can: Allowes you to speed up the growth of carrots by clicking on them. For each click the carrot
+            grows by one stage.<br>
+            * Lootbox Cool-down: Reduces the cooldown of the lootbox drastically.<br>
+            * CarrotUp: Increases the amount of carrots that grow on a field by 2. This also works for fields where
+            carrots are already growing!<br>
+        </p>
+    </div>
+</body>
+<script src="game.js"></script>
+
+</html>

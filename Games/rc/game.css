@@ -1,0 +1,24 @@
+div {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+div#mainDiv {
+    width: 90vw;
+}
+
+div#sidebarDiv {
+    margin-left: auto;
+    width: 10vw;
+}
+
+p, ul {
+    margin: 0;
+}
+
+button {
+    background-color: black;
+    height: 10vh;
+    width: 10vw;
+}
