@@ -7,17 +7,14 @@
 html, body{
     margin: 0;
     padding: 0;
-    min-width: 420px;
     height: 100%;
     width: 100%;
     background-color: black;
 }
 
 div.header{
-    width: 100%;
-    min-width: 420px;
-    height: min(9vw, 9vh);
-    min-height: 40px;
+    display: flex;
+    justify-content: space-between;
     text-align: center;
 }
 
@@ -49,15 +46,7 @@ img.logo{
     height: 100%;
 }
 
-img.left{
-    float: left;
-}
-
-img.right{
-    float: right;
-}
-
 span.title{
-    font-size: max(2em, min(6.5vw, 6.5vh));
+    font-size: min(6.5vw, 3em);
     display: inline-block;
 }
