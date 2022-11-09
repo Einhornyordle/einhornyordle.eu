@@ -50,3 +50,7 @@ span.title{
     font-size: min(6.5vw, 3em);
     display: inline-block;
 }
+
+a.header{
+    text-decoration: none;
+}
