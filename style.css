@@ -20,9 +20,10 @@ div.header{
 
 nav{
     width: 100%;
+    height: max(1.5em, min(2vw, 2vh));
     font-size: max(1.5em, min(2vw, 2vh));
-    border-bottom: solid;
-    border-top: solid;
+    border-bottom: solid 2px;
+    border-top: solid 2px;
 }
 
 nav > a {
@@ -32,13 +33,13 @@ nav > a {
 
 iframe.content{
     border: none;
-    height: calc(100% - (max(50px, min(9vw, 9vh)) + max(1.5em, min(2vw, 2vh)) + 10px));
+    height: calc(100% - (78px + max(1.5em, min(2vw, 2vh))));
     width: 100%;
     float: left;
     padding-top: 10px;
 }
 
-h1{
+h1, h2{
     margin-top: 0;
 }
 
