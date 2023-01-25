@@ -1,3 +1,10 @@
+local port = 25890
+local data = {
+    name = "Crystal_Miner",
+    type = "miner",
+    broken = 0
+}
+local modem = peripheral.find("modem")
 while true do
     if turtle.getItemSpace() < 1 then
         if turtle.getSelectedSlot() > 15 then
@@ -6,6 +13,15 @@ while true do
             turtle.select(turtle.getSelectedSlot() + 1)
         end
     else
-        turtle.dig()
+        if turtle.dig() then
+            data["broken"] = data["broken"] + 1
+        end
     end
+    if modem then
+        modem.transmit(port, port, data)
+    end
+    term.clear()
+    term.setCursorPos(1, 1)
+    print(data.name)
+    print("Blocks broken: " + data["broken"])
 end
