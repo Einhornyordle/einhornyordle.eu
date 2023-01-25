@@ -23,5 +23,5 @@ while true do
     term.clear()
     term.setCursorPos(1, 1)
     print(data.name)
-    print("Blocks broken: " + data["broken"])
+    print("Blocks broken: " .. data["broken"])
 end
