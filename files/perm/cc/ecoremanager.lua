@@ -1,4 +1,5 @@
 term.clear()
+term.setCursorPos(1, 1)
 local modem = peripheral.find("modem")
 local core = peripheral.find("draconic_rf_storage")
 
