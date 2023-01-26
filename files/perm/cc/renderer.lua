@@ -58,7 +58,7 @@ while true do
             data[msg[5]["type"]][msg[5]["name"]] = msg[5];
         end
     elseif msg[1] == "mouse_click" then
-        if msg[2] == 2 then
+        if screen["type"] then
             screen = {}
         elseif linemap[msg[4]] then
             screen = linemap[msg[4]]
