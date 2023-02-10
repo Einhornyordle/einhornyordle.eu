@@ -194,6 +194,7 @@ function FillModpacklist(data) {
         let child = document.createElement("a");
         child.innerHTML = modpack.name;
         child.href = modpack.link;
+        child.target = "_blank";
         modpacklist.appendChild(child);
         modpacklist.appendChild(document.createElement("br"));
         modpacklist.appendChild(document.createElement("br"));
