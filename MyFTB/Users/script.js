@@ -2,6 +2,13 @@
 
 const modpacks = [
     {
+        "name": "All The Mods 8",
+        "link": "https://myftb.de/servers/atm8",
+        "world": "0",
+        "version": "3",
+        "mode": "0"
+    },
+    {
         "name": "Antimatter Chemistry",
         "link": "https://myftb.de/servers/antimatter",
         "world": "2",
@@ -9,7 +16,7 @@ const modpacks = [
         "mode": "1"
     },
     {
-        "name": "Better Minecraft [PLUS] - 1.18.2",
+        "name": "Better MC [PLUS] - BMP2",
         "link": "https://myftb.de/servers/BetterMinecraft118Plus",
         "world": "0",
         "version": "2",
@@ -76,7 +83,7 @@ const modpacks = [
         "link": "https://myftb.de/servers/infinity-evolved",
         "world": "0",
         "version": "0",
-        "mode": "-1"
+        "mode": "0"
     },
     {
         "name": "Infinity Evolved Reloaded",
@@ -84,6 +91,13 @@ const modpacks = [
         "world": "0",
         "version": "1",
         "mode": "-1"
+    },
+    {
+        "name": "Infinity Hardmode",
+        "link": "https://myftb.de/servers/infinity-hardmode",
+        "world": "0",
+        "version": "0",
+        "mode": "1"
     },
     {
         "name": "Infinity Skyblock",
@@ -121,6 +135,13 @@ const modpacks = [
         "mode": "1"
     },
     {
+        "name": "Pixelmon",
+        "link": "https://myftb.de/servers/pixelmon",
+        "world": "0",
+        "version": "1",
+        "mode": "0"
+    },
+    {
         "name": "Regrowth",
         "link": "https://myftb.de/servers/regrowth",
         "world": "2",
@@ -149,16 +170,16 @@ const modpacks = [
         "mode": "0"
     },
     {
-        "name": "Staged Learning",
-        "link": "https://myftb.de/servers/staged-learning",
-        "world": "0",
-        "version": "1",
-        "mode": "1"
-    },
-    {
         "name": "Stoneblock 2",
         "link": "https://myftb.de/servers/stoneblock-2",
         "world": "1",
+        "version": "1",
+        "mode": "0"
+    },
+    {
+        "name": "Tekkit 2",
+        "link": "https://myftb.de/servers/tekkit2",
+        "world": "0",
         "version": "1",
         "mode": "0"
     },
@@ -175,6 +196,20 @@ const modpacks = [
         "world": "0",
         "version": "1",
         "mode": "0"
+    },
+    {
+        "name": "Vanilla",
+        "link": "https://myftb.de/servers/vanilla",
+        "world": "0",
+        "version": "3",
+        "mode": "0"
+    },
+    {
+        "name": "Vanilla Skyblock",
+        "link": "https://myftb.de/servers/vskyblock",
+        "world": "1",
+        "version": "3",
+        "mode": "2"
     },
     {
         "name": "Vault Hunters 3rd Edition",
