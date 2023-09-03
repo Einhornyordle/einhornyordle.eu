@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyFTB Team Tools</title>
+    <link rel="stylesheet" href="../../../style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <h1>About this page</h1>
+    This page contains tools useful for the teammembers of MyFTB. It's pretty useless for everyone else.<br>
+    <br>
+    <h1 class="title">MyFTB Better Questing Command Creator</h1>
+    <table>
+        <tr>
+            <th>
+                /bq_admin check_all
+            </th>
+            <td>
+                <textarea id="checkAll" name="CheckAll"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Username
+            </th>
+            <td>
+                <input type="text" id="username" name="Username">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="button" onclick="CreateQuestCommands()">Start</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="text" id="outputCommand" name="OutputCommand" value="Command Text Output" readonly hidden>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" id="back" name="Back" onclick="NextCommand(-1)" hidden>Back</button>
+            </td>
+            <td>
+                <button type="button" id="next" name="Next" onclick="NextCommand(1)" hidden>Next</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <textarea type="text" id="outputCommandList" name="OutputCommandList" value="Command Text Output"
+                    readonly hidden></textarea>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
