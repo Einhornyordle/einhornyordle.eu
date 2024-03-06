@@ -1,10 +1,11 @@
-*{
+* {
     color: darkgray;
     border-color: darkgray;
     box-sizing: border-box;
 }
 
-html, body{
+html,
+body {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -12,13 +13,13 @@ html, body{
     background-color: black;
 }
 
-div.header{
+div.header {
     display: flex;
     justify-content: space-between;
     text-align: center;
 }
 
-nav{
+nav {
     width: 100%;
     height: max(1.5em, min(2vw, 2vh));
     font-size: max(1.5em, min(2vw, 2vh));
@@ -26,12 +27,12 @@ nav{
     border-top: solid 2px;
 }
 
-nav > a {
+nav>a {
     text-decoration: none;
     white-space: nowrap;
 }
 
-iframe.content{
+iframe.content {
     border: none;
     height: calc(100% - (78px + max(1.5em, min(2vw, 2vh))));
     width: 100%;
@@ -39,19 +40,20 @@ iframe.content{
     padding-top: 10px;
 }
 
-h1, h2{
+h1,
+h2 {
     margin-top: 0;
 }
 
-img.logo{
+img.logo {
     height: 100%;
 }
 
-span.title{
+span.title {
     font-size: min(6.5vw, 3em);
     display: inline-block;
 }
 
-a.header{
+a.header {
     text-decoration: none;
 }
