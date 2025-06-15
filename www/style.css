@@ -37,30 +37,30 @@
 }
 
 .theme-light {
-    --bg: var(--light-bg);
-    --surface: var(--light-surface);
-    --text: var(--light-text);
-    --text-secondary: var(--light-text-secondary);
-    --accent: var(--light-accent);
-    --accent-hover: var(--light-accent-hover);
+    --bg: var(--light-bg) !important;
+    --surface: var(--light-surface) !important;
+    --text: var(--light-text) !important;
+    --text-secondary: var(--light-text-secondary) !important;
+    --accent: var(--light-accent) !important;
+    --accent-hover: var(--light-accent-hover) !important;
 }
 
 .theme-dark {
-    --bg: var(--dark-bg);
-    --surface: var(--dark-surface);
-    --text: var(--dark-text);
-    --text-secondary: var(--dark-text-secondary);
-    --accent: var(--dark-accent);
-    --accent-hover: var(--dark-accent-hover);
+    --bg: var(--dark-bg) !important;
+    --surface: var(--dark-surface) !important;
+    --text: var(--dark-text) !important;
+    --text-secondary: var(--dark-text-secondary) !important;
+    --accent: var(--dark-accent) !important;
+    --accent-hover: var(--dark-accent-hover) !important;
 }
 
 .theme-black {
-    --bg: var(--black-bg);
-    --surface: var(--black-surface);
-    --text: var(--black-text);
-    --text-secondary: var(--black-text-secondary);
-    --accent: var(--black-accent);
-    --accent-hover: var(--black-accent-hover);
+    --bg: var(--black-bg) !important;
+    --surface: var(--black-surface) !important;
+    --text: var(--black-text) !important;
+    --text-secondary: var(--black-text-secondary) !important;
+    --accent: var(--black-accent) !important;
+    --accent-hover: var(--black-accent-hover) !important;
 }
 
 * {
