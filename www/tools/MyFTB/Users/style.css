@@ -1,9 +1,0 @@
-select, button{
-    background-color: black;
-    width: 100%;
-}
-
-option:checked{
-    background-color: gray;
-    color: black;
-}

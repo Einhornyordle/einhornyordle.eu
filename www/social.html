@@ -3,18 +3,116 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <meta name="author" content="Einhornyordle">
-    <meta name="description" content="My social media channels and similar sites">
-    <meta name="keywords" content="Einhornyordle, Crystal, TheCrystal, Socials, Social, Media, Contact, Message, Discord, Guilded, Server, Mastodon, Steam, MyAnimeList, Github, Source">
+    <meta content="Einhornyordle" name="author">
+    <meta content="dark light" name="color-scheme"/>
+    <meta content="Connect with Einhornyordle on various social media platforms and gaming networks."
+          name="description">
+    <meta content="Einhornyordle, Crystal, Social Media, Discord, Steam, GitHub, MyAnimeList, Mastodon" name="keywords">
+    <meta content="default-src 'self'; img-src 'self' data: https://joinmastodon.org https://store.steampowered.com https://myanimelist.net https://github.githubassets.com; script-src 'self';"
+          http-equiv="Content-Security-Policy">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="#333333" name="theme-color">
+    <meta content="Einhornyordle Crystal - Social Links" property="og:title">
+    <meta content="Connect with Einhornyordle on various social media platforms and gaming networks."
+          property="og:description">
+    <meta content="website" property="og:type">
+    <meta content="https://einhornyordle.eu/social.html" property="og:url"/>
+    <meta content="https://einhornyordle.eu/images/crystal.svg" property="og:image"/>
+    <meta content="summary_large_image" name="twitter:card">
+    <meta content="Einhornyordle Crystal - Social Links" name="twitter:title">
+    <meta content="Connect with Einhornyordle on various social media platforms and gaming networks."
+          name="twitter:description">
+    <meta content="https://einhornyordle.eu/images/crystal.svg" name="twitter:image">
+    <script src="/theme.js"></script>
+    <link as="image" href="/images/crystal.svg" rel="preload" type="image/svg+xml">
+    <link as="image" href="/images/mastodon.svg" rel="preload" type="image/svg+xml">
+    <link as="image" href="/images/steam.png" rel="preload" type="image/png">
+    <link as="image" href="/images/mal.ico" rel="preload" type="image/x-icon">
+    <link as="image" href="/images/github.svg" rel="preload" type="image/svg+xml">
+    <link href="favicon.ico" rel="icon" type="image/x-icon">
+    <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="style.css" rel="stylesheet">
+    <script defer src="script.js"></script>
+    <title>Social Links - Einhornyordle Crystal</title>
 </head>
 
 <body>
-    <a href="https://mastodon.online/@Einhornyordle" target="_blank">Mastodon</a><br>
-    <a href="https://steamcommunity.com/id/Einhornyordle/" target="_blank">Steam</a><br>
-    <a href="https://myanimelist.net/profile/Einhornyordle" target="_blank">MyAnimeList</a><br>
-    <a href="https://github.com/Einhornyordle/" target="_blank">Github</a><br>
+<div class="top-bar">
+    <div class="top-bar-left">
+        <img alt="Crystal Logo" class="logo" decoding="async" height="40" src="/images/crystal.svg" width="40">
+        <nav aria-label="Main navigation" class="main-nav">
+            <a class="nav-link" href="/">Home</a>
+            <a class="nav-link" href="/social.html">Social</a>
+            <a class="nav-link" href="/Games/Carrot/game.html">Carrot Game</a>
+        </nav>
+    </div>
+    <div class="theme-selector">
+        <select aria-label="Select theme">
+            <option value="light">Light Theme</option>
+            <option value="dark">Dark Theme</option>
+            <option value="black">Black Theme</option>
+        </select>
+    </div>
+</div>
+
+<header class="page-header">
+    <h1>Social Links</h1>
+    <p class="header-text">Connect with me on various platforms</p>
+</header>
+
+<main class="content-wrapper">
+    <section class="content-section social-links">
+        <div class="social-grid">
+            <a class="social-link" href="https://mastodon.online/@Einhornyordle" rel="me noopener" target="_blank">
+                <div class="image-loading">
+                    <img alt="Mastodon logo" class="social-icon" decoding="async"
+                         height="48" loading="lazy" src="/images/mastodon.svg" width="48">
+                </div>
+                <div class="social-text">
+                    <h2>Mastodon</h2>
+                    <p>Follow me on Mastodon</p>
+                </div>
+            </a>
+
+            <a class="social-link" href="https://myanimelist.net/profile/Einhornyordle" rel="me noopener"
+               target="_blank">
+                <img alt="MyAnimeList logo" class="social-icon" decoding="async" height="48"
+                     loading="lazy" src="/images/mal.ico" width="48">
+                <div class="social-text">
+                    <h2>MyAnimeList</h2>
+                    <p>Check out my anime list</p>
+                </div>
+            </a>
+
+            <a class="social-link" href="https://steamcommunity.com/id/Einhornyordle/" rel="me noopener"
+               target="_blank">
+                <img alt="Steam logo" class="social-icon" decoding="async"
+                     height="48" loading="lazy" src="/images/steam.png" width="48">
+                <div class="social-text">
+                    <h2>Steam</h2>
+                    <p>My Steam profile</p>
+                </div>
+            </a>
+
+            <a class="social-link" href="https://github.com/Einhornyordle/" rel="me noopener" target="_blank">
+                <img alt="GitHub logo" class="social-icon"
+                     decoding="async" height="48"
+                     loading="lazy" src="/images/github.svg" width="48">
+                <div class="social-text">
+                    <h2>GitHub</h2>
+                    <p>View my projects</p>
+                </div>
+            </a>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <p>Copyright &copy;
+        <time datetime="2025">2025</time>
+        Einhornyordle
+    </p>
+</footer>
 </body>
 
 </html>

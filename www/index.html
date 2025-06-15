@@ -3,29 +3,72 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Einhornyordle">
-    <meta name="description" content="The official website of Einhornyordle">
-    <meta name="keywords" content="Einhornyordle, Crystal, TheCrystal, Bot, Discord, Server, Carrot, Game, CarrotGame, MyFTB">
+    <meta content="Einhornyordle" name="author">
+    <meta content="dark light" name="color-scheme"/>
+    <meta content="The official website of Einhornyordle. Follow him on social media, play some games, or just have a look around."
+          name="description">
+    <meta content="Einhornyordle, Crystal, Homepage, Website, Official" name="keywords">
+    <meta content="default-src 'self'; img-src 'self' data:; script-src 'self';"
+          http-equiv="Content-Security-Policy">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="#333333" name="theme-color">
+    <meta content="Einhornyordle Crystal" property="og:title">
+    <meta content="The official website of Einhornyordle. Follow me on social media, play some games, or just have a look around."
+          property="og:description">
+    <meta content="website" property="og:type">
+    <meta content="https://einhornyordle.eu/" property="og:url"/>
+    <meta content="https://einhornyordle.eu/images/crystal.svg" property="og:image"/>
+    <meta content="summary_large_image" name="twitter:card">
+    <meta content="Einhornyordle Crystal" name="twitter:title">
+    <meta content="The official website of Einhornyordle. Follow me on social media, play some games, or just have a look around."
+          name="twitter:description">
+    <meta content="https://einhornyordle.eu/images/crystal.svg" name="twitter:image">
+    <script src="/theme.js"></script>
+    <link as="image" href="/images/crystal.svg" rel="preload" type="image/svg+xml">
+    <link href="favicon.ico" rel="icon" type="image/x-icon">
+    <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="style.css" rel="stylesheet">
+    <script defer src="script.js"></script>
     <title>Einhornyordle Crystal</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"> </script>
 </head>
 
 <body>
-    <a href="/" target="_self" class="header">
-        <div id="header" title="Header" class="header">
-            <img src="images/crystal.svg" alt="Logo" class="logo">
-            <span class="title">Einhornyordle Crystal</span>
-            <img src="images/crystal.svg" alt="Logo" class="logo">
-        </div>
-    </a>
-    <nav>
-        <a href="?Games/Carrot/game.html" target="_self">Carrot Game</a> |
-        <a href="?social.html" target="_self">Social Media & Co</a> |
-        <a href="?tools" target="_self">Tools</a>
-    </nav>
-    <iframe src="" title="Content" name="content" class="content"></iframe>
+<div class="top-bar">
+    <div class="top-bar-left">
+        <img alt="Crystal Logo" class="logo" decoding="async" height="40" src="/images/crystal.svg" width="40">
+        <nav aria-label="Main navigation" class="main-nav">
+            <a class="nav-link" href="/">Home</a>
+            <a class="nav-link" href="/social.html">Social</a>
+            <a class="nav-link" href="/Games/Carrot/game.html">Carrot Game</a>
+        </nav>
+    </div>
+    <div class="theme-selector">
+        <select aria-label="Select theme">
+            <option value="light">Light Theme</option>
+            <option value="dark">Dark Theme</option>
+            <option value="black">Black Theme</option>
+        </select>
+    </div>
+</div>
+
+<header class="page-header">
+    <h1>Welcome!</h1>
+    <p class="header-text">This page is still a work in progress, stay tuned for more!</p>
+</header>
+
+<main class="content-wrapper">
+    <section class="content-section">
+        <h2>Section</h2>
+        <p>This is the main section of the page.</p>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <p>Copyright &copy;
+        <time datetime="2025">2025</time>
+        Einhornyordle
+    </p>
+</footer>
 </body>
 
 </html>

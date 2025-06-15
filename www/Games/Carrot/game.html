@@ -2,95 +2,148 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8"><meta name="author" content="Einhornyordle">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A minigame about farming and selling carrots">
-    <meta name="keywords" content="Einhornyordle, Crystal, TheCrystal, Carrot, Game, CarrotGame, Minigame, Free, Online, Singleplayer, Browser, Browsergame">
-    <link rel="stylesheet" href="../../style.css">
-    <style>
-        body {
-            -webkit-user-select: none;
-            -khtml-user-select: none;
-            -moz-user-select: none;
-            -o-user-select: none;
-            user-select: none;
-        }
-
-        img.icon {
-            height: 16px;
-            width: 16px;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta content="Einhornyordle" name="author">
+    <meta content="dark light" name="color-scheme"/>
+    <meta content="A minigame about farming and selling carrots" name="description">
+    <meta content="Einhornyordle, Crystal, TheCrystal, Carrot, Game, CarrotGame, Minigame, Free, Online, Singleplayer, Browser, Browsergame"
+          name="keywords">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="#333333" name="theme-color">
+    <meta content="Carrot Game - Einhornyordle Crystal" property="og:title">
+    <meta content="A minigame about farming and selling carrots" property="og:description">
+    <meta content="website" property="og:type">
+    <meta content="https://einhornyordle.eu/Games/Carrot/game.html" property="og:url"/>
+    <meta content="https://einhornyordle.eu/images/crystal.svg" property="og:image"/>
+    <meta content="summary_large_image" name="twitter:card">
+    <meta content="Carrot Game - Einhornyordle Crystal" name="twitter:title">
+    <meta content="A minigame about farming and selling carrots" name="twitter:description">
+    <meta content="https://einhornyordle.eu/images/crystal.svg" name="twitter:image">
+    <script src="/theme.js"></script>
+    <link as="image" href="/images/crystal.svg" rel="preload" type="image/svg+xml">
+    <link href="/favicon.ico" rel="icon" type="image/x-icon">
+    <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="/style.css" rel="stylesheet">
+    <script defer src="/script.js"></script>
+    <script defer src="game.js"></script>
+    <title>Carrot Game - Einhornyordle Crystal</title>
 </head>
 
-<body ondragstart="return false;" ondrop="return false;">
-    <table>
-        <tr>
-            <td><img class="field" id="field1"></td>
-            <td><img class="field" id="field2"></td>
-            <td><img class="field" id="field3"></td>
-            <td id="stats">C<br>C</td>
-        </tr>
-        <tr>
-            <td><img class="field" id="field4"></td>
-            <td><img class="field" id="field5"></td>
-            <td><img class="field" id="field6"></td>
-            <td><img id="payout" src="Pics/Payout.png" onclick="Sell()"></td>
-        </tr>
-        <tr>
-            <td><img class="field" id="field7"></td>
-            <td><img class="field" id="field8"></td>
-            <td><img class="field" id="field9"></td>
-            <td><img id="reward" src="Pics/Reward.png" onclick="Reward()"></td>
-        </tr>
-        <tr>
-            <td><img id="upgrade1" src="Pics/CoinUp.png"></td>
-            <td><img id="upgrade2" src="Pics/RewardUp.png"></td>
-            <td><img id="upgrade3" src="Pics/WateringCan.png"></td>
-        </tr>
-        <tr>
-            <td id="priceUpText" align="center"></td>
-            <td id="rewardUpText" align="center"></td>
-            <td id="specialUpText" align="center"></td>
-        </tr>
-    </table>
-    <div>
-        <p>
-            Android App now available! <a href="../downloads/eu.einhornyordle.carrotgame.apk">Download</a>
-        </p>
-        <h2>Instructions</h2>
-        <p>
-            To win the game you have to fulfill the following requirements:<br>
-            * You have to buy all upgrades from the third upgrade slot so that the "Win"-Field appears.<br>
-            * To activate it, all 9 fields need to have a grown carrot plantet on them at the same time.<br>
-            * After that, you just have to click on the "Win"-Field.<br>
-            <br>
-            There are 9 fields where you can grow carrots, to do so you have to unlock (buy) them first. This costs a
-            specific amount of coins depending on the field (left to right, top to bottom: 1, 10, 100, 1.000, 10.000,
-            100.000, 1.000.000, 10.000.000 and 100.000.000 coins).<br>
-            <br>
-            After unlocking a field you can plant a seed for 3 coins which slowly grows into a carrot. As soon as the
-            carrot is fully grown you can harvest it by clicking on the field. By clicking on the Sell-Button (the one
-            below the Carrot and Coin counter) you can sell all your carrots at once for 5 coins each.<br>
-            <br>
-            The lootbox below the Sell-Button can be clicked every few seconds and gives you a random amount of coins or
-            carrots between 0 and 9<br>
-            <br>
-            Below the 9 carrot fields there are 3 upgrade slots:<br>
-            * The first upgrade increases the sell value of carrots.<br>
-            * The second upgrade increases the amount of loot you gain from the lootbox.<br>
-            * The third upgrade consists of unique upgrades which can only be bought in a limited amount. After you
-            bought the final upgrade from this slot the "Win"-Field will appear here.<br>
-            <br>
-            The following unique upgrades are available <b>(Spoilers ahead!)</b>:<br>
-            * Watering Can: Allowes you to speed up the growth of carrots by clicking on them. For each click the carrot
-            grows by one stage.<br>
-            * Lootbox Cool-down: Reduces the cooldown of the lootbox drastically.<br>
-            * CarrotUp: Increases the amount of carrots that grow on a field by 2. This also works for fields where
-            carrots are already growing!<br>
-        </p>
+<body class="game-body" ondragstart="return false;" ondrop="return false;">
+<div class="top-bar">
+    <div class="top-bar-left">
+        <img alt="Crystal Logo" class="logo" decoding="async" height="40" src="/images/crystal.svg" width="40">
+        <nav aria-label="Main navigation" class="main-nav">
+            <a class="nav-link" href="/">Home</a>
+            <a class="nav-link" href="/social.html">Social</a>
+            <a class="nav-link" href="/Games/Carrot/game.html">Carrot Game</a>
+        </nav>
     </div>
+    <div class="theme-selector">
+        <select aria-label="Select theme">
+            <option value="light">Light Theme</option>
+            <option value="dark">Dark Theme</option>
+            <option value="black">Black Theme</option>
+        </select>
+    </div>
+</div>
+
+<header class="page-header">
+    <h1>Carrot Game</h1>
+    <p class="header-text">Grow and sell carrots in this farming game</p>
+</header>
+
+<main class="content-wrapper">
+    <section class="content-section">
+        <div class="game-container">
+            <table class="game-table">
+                <tr>
+                    <td><img alt="Field 1" class="field" id="field1" src=""></td>
+                    <td><img alt="Field 2" class="field" id="field2" src=""></td>
+                    <td><img alt="Field 3" class="field" id="field3" src=""></td>
+                    <td id="stats">C<br>C</td>
+                </tr>
+                <tr>
+                    <td><img alt="Field 4" class="field" id="field4" src=""></td>
+                    <td><img alt="Field 5" class="field" id="field5" src=""></td>
+                    <td><img alt="Field 6" class="field" id="field6" src=""></td>
+                    <td><img alt="Sell button" id="payout" onclick="Sell()" src="Pics/Payout.png"></td>
+                </tr>
+                <tr>
+                    <td><img alt="Field 7" class="field" id="field7" src=""></td>
+                    <td><img alt="Field 8" class="field" id="field8" src=""></td>
+                    <td><img alt="Field 9" class="field" id="field9" src=""></td>
+                    <td><img alt="Reward button" id="reward" onclick="Reward()" src="Pics/Reward.png"></td>
+                </tr>
+                <tr>
+                    <td><img alt="Coin upgrade" id="upgrade1" src="Pics/CoinUp.png"></td>
+                    <td><img alt="Reward upgrade" id="upgrade2" src="Pics/RewardUp.png"></td>
+                    <td><img alt="Special upgrade" id="upgrade3" src="Pics/WateringCan.png"></td>
+                </tr>
+                <tr>
+                    <td align="center" id="priceUpText"></td>
+                    <td align="center" id="rewardUpText"></td>
+                    <td align="center" id="specialUpText"></td>
+                </tr>
+            </table>
+
+            <div class="game-download-notice">
+                <p>Android App is now available! <a href="../downloads/eu.einhornyordle.carrotgame.apk">Download</a></p>
+            </div>
+
+            <div class="game-instructions">
+                <h2>Instructions</h2>
+                <p>To win the game, you have to fulfill the following requirements:</p>
+                <ul>
+                    <li>You have to buy all upgrades from the third upgrade slot so that the "Win"-Field appears.</li>
+                    <li>To activate it, all nine fields need to have a grown carrot planted on them at the same time.
+                    </li>
+                    <li>After that, you have to click on the "Win"-Field.</li>
+                </ul>
+
+                <p>There are nine fields where you can grow carrots, to do so you have to unlock (buy) them first. This
+                    costs a specific number of coins depending on the field (left to right, top to bottom: 1, 10, 100,
+                    1.000, 10.000, 100.000, 1.000.000, 10.000.000 and 100.000.000 coins).</p>
+
+                <p>After unlocking a field you can plant a seed for three coins which slowly grows into a carrot. As
+                    soon as the carrot is fully grown, you can harvest it by clicking on the field. By clicking on the
+                    Sell-Button (the one below the Carrot and Coin counter), you can sell all your carrots at once for
+                    five coins each.</p>
+
+                <p>The lootbox below the Sell-Button can be clicked every few seconds and gives you a random number of
+                    coins or carrots between 0 and 9.</p>
+
+                <h3>Upgrades</h3>
+                <p>Below the nine carrot fields, there are three upgrade slots:</p>
+                <ul>
+                    <li>The first upgrade increases the sell value of carrots.</li>
+                    <li>The second upgrade increases the amount of loot you gain from the lootbox.</li>
+                    <li>The third upgrade consists of unique upgrades which can only be bought in a limited amount.
+                        After you bought the final upgrade from this slot, the "Win"-Field will appear here.
+                    </li>
+                </ul>
+
+                <h3>Unique Upgrades (Spoilers!)</h3>
+                <ul>
+                    <li>Watering Can: Allows you to speed up the growth of carrots by clicking on them. For each click
+                        the carrot grows by one stage.
+                    </li>
+                    <li>Lootbox Cool-down: Reduces the cooldown of the lootbox drastically.</li>
+                    <li>CarrotUp: Increases the number of carrots that grow on a field by 2. This also works for fields
+                        where carrots are already growing!
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <p>Copyright &copy;
+        <time datetime="2025">2025</time>
+        Einhornyordle
+    </p>
+</footer>
 </body>
-<script src="game.js"></script>
 
 </html>
