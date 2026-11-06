@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="Einhornyordle" name="author">
+    <meta content="dark light" name="color-scheme" />
+    <meta content="A collection of services run by Einhornyordle." name="description">
+    <meta content="Einhornyordle, Crystal, Services, Self-hosted" name="keywords">
+    <meta
+        content="default-src 'self'; img-src 'self' data: https://joinmastodon.org https://store.steampowered.com https://myanimelist.net https://github.githubassets.com; script-src 'self';"
+        http-equiv="Content-Security-Policy">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="#333333" name="theme-color">
+    <meta content="Einhornyordle Crystal - Services" property="og:title">
+    <meta content="A collection of services run by Einhornyordle." property="og:description">
+    <meta content="website" property="og:type">
+    <meta content="https://einhornyordle.eu/services.html" property="og:url" />
+    <meta content="https://einhornyordle.eu/images/crystal.svg" property="og:image" />
+    <meta content="summary_large_image" name="twitter:card">
+    <meta content="Einhornyordle Crystal - Services" name="twitter:title">
+    <meta content="A collection of services run by Einhornyordle." name="twitter:description">
+    <meta content="https://einhornyordle.eu/images/crystal.svg" name="twitter:image">
+    <script src="/theme.js"></script>
+    <link as="image" href="/images/crystal.svg" rel="preload" type="image/svg+xml">
+    <link href="favicon.ico" rel="icon" type="image/x-icon">
+    <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="style.css" rel="stylesheet">
+    <script defer src="script.js"></script>
+    <title>Services - Einhornyordle Crystal</title>
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <img alt="Crystal Logo" class="logo" decoding="async" height="40" src="/images/crystal.svg" width="40">
+            <nav aria-label="Main navigation" class="main-nav">
+                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="/social.html">Social</a>
+                <a class="nav-link" href="/services.html">Services</a>
+                <a class="nav-link" href="/Games/Carrot/game.html">Carrot Game</a>
+            </nav>
+        </div>
+        <div class="theme-selector">
+            <select aria-label="Select theme">
+                <option value="light">Light Theme</option>
+                <option value="dark">Dark Theme</option>
+                <option value="black">Black Theme</option>
+            </select>
+        </div>
+    </div>
+    <header class="page-header">
+        <h1>Services</h1>
+        <p class="header-text">Services I run and maintain</p>
+    </header>
+    <main class="content-wrapper">
+        <section class="content-section services-list">
+            <div class="service-grid">
+                <a class="service-card" href="https://copyparty.einhornyordle.eu/">
+                    <div class="service-header">
+                        <img alt="Copyparty logo" class="service-logo" decoding="async" height="64" loading="lazy"
+                            src="/images/copyparty.svg" width="64">
+                        <h2>Copyparty (Fileserver)</h2>
+                    </div>
+                    <p>I use copyparty not only as a self-hosted files sharing server but also to give trusted people access to parts of my server.</p>
+                </a>
+                <a class="service-card" href="https://fluxer.einhornyordle.eu/">
+                    <div class="service-header">
+                        <img alt="Fluxer logo" class="service-logo" decoding="async" height="64" loading="lazy"
+                            src="/images/fluxer.svg" width="64">
+                        <h2>Fluxer (Chat)</h2>
+                    </div>
+                    <p>My main communication software, I'm mostly active here.</p>
+                </a>
+                <a class="service-card" href="https://forgejo.einhornyordle.eu/">
+                    <div class="service-header">
+                        <img alt="Forgejo logo" class="service-logo" decoding="async" height="64" loading="lazy"
+                            src="/images/forgejo.svg" width="64">
+                        <h2>Forgejo (Source Code)</h2>
+                    </div>
+                    <p>All source code of the public software that I write is either here or on Github.</p>
+                </a>
+                <a class="service-card" href="https://einhornyordle.eu/">
+                    <div class="service-header">
+                        <img alt="Nginx logo" class="service-logo" decoding="async" height="64" loading="lazy"
+                            src="/images/nginx.svg" width="64">
+                        <h2>Nginx (Website & Reverse Proxy)</h2>
+                    </div>
+                    <p>Besides the website where you are on right now Nginx also acts as a revers proxy that connects you to every other service listed here.</p>
+                </a>
+                <a class="service-card" href="https://redlib.einhornyordle.eu/">
+                    <div class="service-header">
+                        <img alt="Redlib logo" class="service-logo" decoding="async" height="64" loading="lazy"
+                            src="/images/redlib.svg" width="64">
+                        <h2>Redlib (Alternative Reddit Frontend)</h2>
+                    </div>
+                    <p>I hate Reddit. The website sucks, they killed my favorite third party app (RIP Reddit is Fun) and of course, fuck spez. So when I need to browse Reddit for answers, I use my Redlib Instance for a debloated, tracker-free experience.</p>
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <p>Copyright &copy;
+            <time datetime="2025">2025</time>
+            Einhornyordle
+        </p>
+    </footer>
+</body>
+
+</html>
