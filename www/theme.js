@@ -1,6 +1,6 @@
 
 // This script must be loaded before any stylesheets
-(function() {
+(function () {
     // Get the stored theme or use system preference
     const storedTheme = localStorage.getItem('theme');
     if (storedTheme) {
